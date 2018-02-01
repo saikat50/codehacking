@@ -30,7 +30,7 @@ class UsersRequest extends Request
             'password'=>'required',
             'is_actve'=>'required',
             'role_id'=>'required',
-            'file'=>'required'
+            'photo_id'=>'required'
 
 
         ];
