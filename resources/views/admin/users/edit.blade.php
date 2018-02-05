@@ -46,11 +46,20 @@
             </div>
 
             <div class="form-grouo">
-                {!! Form::submit('Create User', ['class'=>'btn btn-primary']) !!}
+                {!! Form::submit('Update User', ['class'=>'btn btn-primary']) !!}
             </div>
 
 
             {!! Form::close() !!}
+
+            {!! Form::open(['method'=>'DELETE', 'action'=>['AdminUsersController@destroy', $user->id]]) !!}
+
+            {!! Form::submit('Delete User', ['class'=>'btn btn-danger']) !!}
+
+
+            {!! Form::close() !!}
+
+
         </div>
 
     </div>
