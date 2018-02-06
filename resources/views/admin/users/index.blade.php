@@ -8,7 +8,7 @@
 
         <p class="bg-danger">{{session('deleted_user')}}</p>
 
-        @endif
+    @endif
 
     <table class="table table-condensed">
         <thead>
