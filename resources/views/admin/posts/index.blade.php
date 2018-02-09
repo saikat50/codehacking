@@ -36,8 +36,8 @@
                     <td>{{$post->title}}</td>
                     <td>{{$post->category->name}}</td>
                     <td>{{str_limit($post->body, 30)}}</td>
-                    <td>{{$post->created_at->diffForHumans()}}</td>
-                    <td>{{$post->updated_at->diffForHumans()}}</td>
+                    <td><a href="{{route('home.post', $post->id)}}">view post</a></td>
+                    <td><a href="{{route('admin.comments.show', $post->id)}}">view comments</a></td>
                 </tr>
 
             @endforeach
