@@ -22,13 +22,13 @@
     <hr>
 
     <!-- Preview Image -->
-    <img class="img-responsive" src="{{$post->photo->file}}" alt="">
+    <img height="80px" src="{{$post->photo ? $post->photo->file : "https://placehold.it/300X300"}}" alt="">
 
     <hr>
 
     <!-- Post Content -->
 
-    <p>{{$post->body}}</p>
+    <p>{!! $post->body   !!}</p>
 
     <hr>
 

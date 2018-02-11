@@ -2,6 +2,9 @@
 
 @section('content')
 
+
+    @include('includes.tinyeditor')
+
     <h1>Posts Create</h1>
 
 

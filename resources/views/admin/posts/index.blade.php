@@ -36,7 +36,7 @@
                     <td>{{$post->title}}</td>
                     <td>{{$post->category->name}}</td>
                     <td>{{str_limit($post->body, 30)}}</td>
-                    <td><a href="{{route('home.post', $post->id)}}">view post</a></td>
+                    <td><a href="{{route('home.post', $post->slug)}}">view post</a></td>
                     <td><a href="{{route('admin.comments.show', $post->id)}}">view comments</a></td>
                 </tr>
 
@@ -47,5 +47,12 @@
 
         </tbody>
     </table>
+
+    <div class="row">
+        <div class="col-sm-6 col-sm-offset-5">
+            {{$posts->render()}}
+        </div>
+    </div>
+
 
 @stop

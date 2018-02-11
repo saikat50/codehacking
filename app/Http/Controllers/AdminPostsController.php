@@ -21,7 +21,7 @@ class AdminPostsController extends Controller
     public function index()
     {
         //
-        $posts = Post::all();
+        $posts = Post::paginate();
 
 
         return view('admin.posts.index', compact('posts'));
@@ -122,9 +122,13 @@ class AdminPostsController extends Controller
 
         if($file = $request->file('photo_id')){
 
-            unlink(public_path() . $post->photo->file);
+            iF($post->photo){
 
-            $post->photo->delete();
+                unlink(public_path() . $post->photo->file);
+
+                $post->photo->delete();
+            }
+
 
             $name = time() . $file->getClientOriginalName();
 
@@ -152,9 +156,12 @@ class AdminPostsController extends Controller
         //
         $post = Post::findOrFail($id);
 
-        unlink(public_path() . $post->photo->file);
+        if($post->photo){
 
-        $post->photo->delete();
+            unlink(public_path() . $post->photo->file);
+
+            $post->photo->delete();
+        }
 
         $post->delete();
 
@@ -165,11 +172,13 @@ class AdminPostsController extends Controller
     }
 
 
-    public function post($id){
+    public function post($slug){
 
-        $post = Post::findOrFail($id);
+        $post = Post::findBySlug($slug);
 
-        $comments = $post->comments()->where('is_active', 1)->get();
+        $posts = Post::findOrFail($post->id);
+
+        $comments = $posts->comments()->where('is_active', 1)->get();
 
         return view('post', compact('post', 'comments'));
 

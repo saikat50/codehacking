@@ -1,4 +1,9 @@
 .comment-reply {
-  display: none; }
+  display: none;
+}
 
-/*# sourceMappingURL=app.css.map */
+body {
+  background: #fff;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiQzpcXHhhbXBwXFxodGRvY3NcXGNvZGVoYWNraW5nXFxyZXNvdXJjZXNcXGFzc2V0c1xcc2Fzc1xcYXBwLnNjc3MiLCJzb3VyY2VzIjpbIi94YW1wcC9odGRvY3MvY29kZWhhY2tpbmcvcmVzb3VyY2VzL2Fzc2V0cy9zYXNzL2FwcC5zY3NzIl0sInNvdXJjZXNDb250ZW50IjpbIi8vIEBpbXBvcnQgXCJub2RlX21vZHVsZXMvYm9vdHN0cmFwLXNhc3MvYXNzZXRzL3N0eWxlc2hlZXRzL2Jvb3RzdHJhcFwiO1xuXG4uY29tbWVudC1yZXBseXtcblxuICBkaXNwbGF5OiBub25lO1xuXG59XG5cbmJvZHl7XG5cbiAgYmFja2dyb3VuZDogI2ZmZjtcblxufVxuXG4iXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUEsQUFBQSxjQUFjLENBQUE7RUFFWixPQUFPLEVBQUUsSUFBSTtDQUVkOztBQUVELEFBQUEsSUFBSSxDQUFBO0VBRUYsVUFBVSxFQUFFLElBQUk7Q0FFakIifQ== */

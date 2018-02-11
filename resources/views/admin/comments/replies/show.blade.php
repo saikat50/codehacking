@@ -27,7 +27,7 @@
                     <td>{{$reply->email}}</td>
                     <td>{{$reply->comment->post->title}}</td>
                     <td>{{$reply->body}}</td>
-                    <td><a href="{{route('home.post', $comment->post->id)}}">view post</a></td>
+                    <td><a href="{{route('home.post', $comment->post->slug)}}">view post</a></td>
                     <td>
 
                         @if($reply->is_active==1)
